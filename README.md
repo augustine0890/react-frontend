@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Run a cmd in a new container
     ```
     docker run -it \
-        --rm \ 
+        --rm \
         -p 8000:80 \
         --name <container> <image>
     ```
@@ -51,10 +51,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - _Build_: the `node_modules` directory is created in the image.
     - _Run_: the current directory is mounted into the container, overwriting the `node_modules` that were installed during the build.
 
-```
-environment:
-    - CHOKIDAR_USEPOLLING=true
-```
+    ```
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+    ```
 - `CHOKIDAR_USEPOLLING=true` enables a polling mechanism via chokidar (which wraps `fs.watch`, `fs.watchFile`, and `fsevents`) so that hot-reloading will work.
 
 - Builds, (re)creates, starts, and attaches to containers for a service.
@@ -67,4 +67,14 @@ environment:
     - `docker-compose stop`
     - They can be started again with `docker-compose start`.
 
-## 
+## GitHub Actions
+- User can create custom Software Development Life Cycle (SDLC) workflows.
+- Build end-to-end CI (Continous Integration) and Continuous Development (CD)
+
+**The Syntax**
+- Workflow: Since the GitHub action provides the facility to build end-to-end continuous integration (CI) and continuous deployment (CD) capabilities, this term refers to that point when the flow starts executing by the CI tool.
+- Job: This term refers to all the tasks in a single workflow. A workflow contains more than one jobs and it is required for all of them to complete their execution to prevent the failure.
+- Step: For a job to complete its execution, it must complete all the steps embedded in it.
+- Action: Action is the primary subset of Step and the smallest subset of Workflow. Every step consists of multiple actions that must get executed successfully.
+
+[**Quickstart**](https://docs.github.com/en/free-pro-team@latest/actions/quickstart)
